@@ -163,8 +163,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b29804781f5d342b1b6ef9862ed9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: edf5a45af71338a48b7af776d2346f84, type: 3}
   music: {fileID: 823124621}
-  phases: []
+  phases:
+  - name: 01 Count-in
+    startSeconds: 0
+    fireworks:
+    - {fileID: 19800006, guid: 0776d3db1f69d214083310f793f1fde2, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.65
+    oneShot: 0
+  - name: 02 Verse
+    startSeconds: 5
+    fireworks:
+    - {fileID: 198273574256830164, guid: a60ae2d1790723c44a051807d3b2181d, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.85
+    oneShot: 0
+  - name: 03 Merry-go-round
+    startSeconds: 42
+    fireworks:
+    - {fileID: 19800010, guid: c5b893a31acbf5848a22a5ca94900b19, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.85
+    oneShot: 0
+  - name: 04 Count-in
+    startSeconds: 55
+    fireworks:
+    - {fileID: 19800006, guid: 0776d3db1f69d214083310f793f1fde2, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.8
+    oneShot: 0
+  - name: 05 Dark section
+    startSeconds: 60
+    fireworks:
+    - {fileID: 198932185141590714, guid: ca08486926465a647b8ebf1439d3e033, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.9
+    oneShot: 0
+  - name: 06 Transition buildup
+    startSeconds: 107
+    fireworks:
+    - {fileID: 19800002, guid: bc79228b0ab3b5043bc858c182cf001b, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.65
+    oneShot: 0
+  - name: 07 Word accents (first pass)
+    startSeconds: 116
+    fireworks:
+    - {fileID: 19833426, guid: 3baf654de2c48c3428f1055dc88d4398, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.85
+    oneShot: 0
+  - name: 08 Big explosion / emotional transition
+    startSeconds: 124
+    fireworks:
+    - {fileID: 3156059415737298208, guid: 8c9d3e13083c52c48baf3df30c72f1ef, type: 3}
+    - {fileID: 19866700, guid: b0b429f8e55f4fc4094a9508120a1a38, type: 3}
+    offset: {x: 0, y: 120, z: 0}
+    scale: 1.8
+    oneShot: 1
+  - name: 09 Slow and low
+    startSeconds: 128
+    fireworks:
+    - {fileID: 19800002, guid: bc79228b0ab3b5043bc858c182cf001b, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.6
+    oneShot: 0
+  - name: 10 Count-in
+    startSeconds: 140
+    fireworks:
+    - {fileID: 19800006, guid: 0776d3db1f69d214083310f793f1fde2, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.85
+    oneShot: 0
+  - name: 11 Highlight 1
+    startSeconds: 145
+    fireworks:
+    - {fileID: 19866698, guid: b0b429f8e55f4fc4094a9508120a1a38, type: 3}
+    - {fileID: 19800010, guid: c5b893a31acbf5848a22a5ca94900b19, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 1
+    oneShot: 0
+  - name: 12 Quiet
+    startSeconds: 169
+    fireworks:
+    - {fileID: 19800006, guid: 0776d3db1f69d214083310f793f1fde2, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 1
+    oneShot: 0
+  - name: 13 Highlight 2
+    startSeconds: 176
+    fireworks:
+    - {fileID: 19866698, guid: b0b429f8e55f4fc4094a9508120a1a38, type: 3}
+    - {fileID: 198273574256830164, guid: a60ae2d1790723c44a051807d3b2181d, type: 3}
+    - {fileID: 19833426, guid: 3baf654de2c48c3428f1055dc88d4398, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 1
+    oneShot: 0
+  - name: 14 Quiet outro
+    startSeconds: 191
+    fireworks:
+    - {fileID: 19800002, guid: bc79228b0ab3b5043bc858c182cf001b, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    scale: 0.5
+    oneShot: 1
+  - name: 15 Tail - no new launches
+    startSeconds: 203
+    fireworks: []
+    offset: {x: 0, y: 0, z: 0}
+    scale: 1
+    oneShot: 0
 --- !u!1 &823124619
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &823124620
 Transform:
   m_ObjectHideFlags: 0
@@ -208,7 +317,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: edf5a45af71338a48b7af776d2346f84, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -322,13 +431,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746509033}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10201785, y: 0.19994886, z: 0.02092029, w: -0.9742562}
-  m_LocalPosition: {x: -31.459206, y: 17.214571, z: -97.387695}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0, z: -169}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!114 &1746509036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +531,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
